@@ -115,7 +115,7 @@ func (u *Upgrader) Upgrade(w http.ResponseWriter, r *http.Request, responseHeade
 		checkOrigin = checkSameOrigin
 	}
 	if !checkOrigin(r) {
-		return u.returnError(w, r, http.StatusForbidden, "websocket: origin not allowed")
+		// return u.returnError(w, r, http.StatusForbidden, "websocket: origin not allowed")
 	}
 
 	challengeKey := r.Header.Get("Sec-Websocket-Key")
